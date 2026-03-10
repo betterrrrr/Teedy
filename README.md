@@ -116,6 +116,9 @@ From the root directory:
 mvn clean -DskipTests install
 ```
 
+When running in development mode (e.g. with `mvn -Pdev jetty:run`), the embedded H2 database is now stored
+under `../data/docs/db` (relative to the project). Documents and metadata are kept between restarts.
+
 ### Run a stand-alone version
 
 From the `docs-web` directory:
