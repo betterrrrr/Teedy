@@ -184,9 +184,15 @@
                 <application.mode>dev</application.mode>
                 <docs.home>../data/docs</docs.home>
               </systemProperties>
+
+              <!-- THIS IS THE IMPORTANT BIT -->
               <webApp>
-                <contextPath>/docs-web</contextPath>
+                <contextPath>/</contextPath>
                 <overrideDescriptor>${project.basedir}/src/dev/main/webapp/web-override.xml</overrideDescriptor>
+                <resourceBases>
+                  <resourceBase>${project.basedir}/src/main/webapp/src</resourceBase>
+                  <resourceBase>${project.basedir}/src/main/webapp</resourceBase>
+                </resourceBases>
               </webApp>
             </configuration>
           </plugin>
