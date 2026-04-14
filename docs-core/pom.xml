@@ -234,6 +234,28 @@
         <filtering>false</filtering>
       </resource>
     </resources>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>jar-before-site</id>
+            <phase>pre-site</phase>
+            <goals>
+              <goal>jar</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-site-plugin</artifactId>
+        <configuration>
+          <outputDirectory>${project.parent.basedir}/target/site/${project.artifactId}</outputDirectory>
+        </configuration>
+      </plugin>
+    </plugins>
   </build>
 
 </project>
