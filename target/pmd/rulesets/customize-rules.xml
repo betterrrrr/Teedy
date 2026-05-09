@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<ruleset name="Custom Rules"
+    xmlns="http://pmd.sourceforge.net/ruleset/2.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 https://pmd.sourceforge.io/ruleset_2_0_0.xsd">
+
+    <description>
+        Custom ruleset targeting LoC, CC, WMC, CBO, and LCOM metrics.
+    </description>
+
+    <!-- Cyclomatic Complexity (CC) -->
+    <rule ref="category/java/design.xml/CyclomaticComplexity" />
+
+    <!-- Lines of code (LoC) -->
+    <rule ref="category/java/design.xml/NcssCount" />
+
+    <!-- Weighted Methods per Class (WMC) -->
+    <rule ref="category/java/design.xml/TooManyMethods" />
+
+    <!-- Coupling Between Objects (CBO) -->
+    <rule ref="category/java/design.xml/CouplingBetweenObjects" />
+
+    <!-- Lack of Cohesion in Methods (LCOM) -->
+    <rule ref="category/java/design.xml/GodClass" />
+
+</ruleset>
